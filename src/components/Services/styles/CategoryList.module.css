@@ -1,0 +1,15 @@
+.list h2 {
+    padding-bottom: 20px;
+}
+.list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.list a {
+    color: var(--purple-dark);
+    transition: color .1s ease-out;
+}
+.list a:hover {
+    color: var(--secondary-color);
+}

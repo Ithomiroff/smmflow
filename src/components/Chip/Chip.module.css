@@ -1,0 +1,14 @@
+.chip {
+    border-radius: 30px;
+    line-height: 38px;
+    padding: 0 16px;
+    width: fit-content;
+}
+.dark {
+    background: rgba(246, 244, 255, 0.1);
+    color: var(--primary-light-color);
+}
+.light {
+    background: var(--primary-extra-light-color);
+    color: var(--primary-light-color);
+}

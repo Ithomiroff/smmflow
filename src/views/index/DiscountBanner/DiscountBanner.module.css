@@ -1,0 +1,23 @@
+.inner {
+    padding: 50px 0;
+}
+.banner {
+    background-image: url("/banner-discount.png");
+    height: 517px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 0px 15px 15px 0px;
+    padding: 0 0 0 20px;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+}
+.text h1, .text h2 {
+    color: var(--text-color-light) !important;
+}
+.text h2 {
+    padding: 32px 0;
+}

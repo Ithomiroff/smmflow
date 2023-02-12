@@ -1,0 +1,21 @@
+.inner {
+    padding: 32px 40px;
+    background-color: var(--text-color-light);
+    border-radius: 15px;
+    width: 485px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+@media (max-width: 530px) {
+    .inner {
+        width: 100%;
+    }
+}

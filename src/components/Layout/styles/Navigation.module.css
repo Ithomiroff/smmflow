@@ -1,0 +1,41 @@
+.nav {
+    height: 100%;
+    color: var(--text-color-light);
+}
+.list {
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+.list .item {
+    padding: 10px;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.list a {
+    transition: color .3s ease-in;
+    cursor: pointer;
+}
+.list .item:hover > a {
+    color: var(--primary-color);
+}
+.list span {
+    cursor: pointer;
+}
+.services {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+.icon {
+    transition: transform .3s ease-in;
+}
+.servicesOpen {
+    color: var(--primary-color);
+}
+.servicesOpen .icon {
+    transform: rotate(-180deg);
+}

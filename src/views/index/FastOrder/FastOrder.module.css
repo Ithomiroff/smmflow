@@ -1,0 +1,17 @@
+.topPanel {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    height: 50px;
+    background: var(--text-color-light);
+    position: absolute;
+    top: -20px;
+    width: 100%;
+}
+.section {
+    position: relative;
+    padding: 35px 0 56px 0;
+
+}
+.title {
+    margin-top: 20px;
+}

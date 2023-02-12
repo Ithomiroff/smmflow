@@ -1,0 +1,37 @@
+.btn {
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    width: fit-content;
+}
+.md {
+    padding: 0 24px;
+    line-height: 48px;
+    height: 48px;
+}
+.lightFill {
+    background: var(--text-color-light);
+    box-shadow: 0px 6px 11px rgba(145, 70, 255, 0.3);
+    color: var(--purple-dark);
+}
+.led {
+    background: transparent;
+    border: 1px solid var(--secondary-color);
+    filter: drop-shadow(0px 0px 34px var(--primary-color));
+    color: var(--secondary-color);
+}
+.gradient {
+    background: linear-gradient(102.74deg, #FF7DB1 7.27%, #7852E4 68.11%);
+    box-shadow: 0px 6px 16px rgba(149, 136, 247, 0.3);
+    color: var(--text-color-light);
+}
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.icon .iconInner {
+    display: block;
+    width: 14px;
+    height: 14px;
+}

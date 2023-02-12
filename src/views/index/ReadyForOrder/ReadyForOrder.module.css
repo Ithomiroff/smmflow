@@ -1,0 +1,14 @@
+
+.inner {
+    background-color: var(--gray-color-light);
+    padding: 48px 0;
+}
+.inner h2 {
+    color: var(--mid-purple);
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 0 0;
+}

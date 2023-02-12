@@ -1,0 +1,51 @@
+.block {
+    position: absolute;
+    overflow: hidden;
+    top: 80px;
+    left: 15px;
+}
+.inner {
+    display: flex;
+    height: 555px;
+    width: 824px;
+}
+.social {
+    padding: 40px 15px 40px 40px;
+    flex-grow: 1;
+}
+.social h2 {
+    padding-bottom: 20px;
+}
+.images {
+    width: 487px;
+    background: var(--gray-color-light);
+    padding: 40px 0 40px 40px;
+}
+.banner {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+.banner h2 {
+    padding-top: 40px;
+}
+.item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    line-height: 48px;
+    border-radius: 0px 10px 10px 0px;
+    transition: all .3s ease-in;
+    color: var(--purple-dark);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.selected {
+    box-shadow: 0px 6px 16px rgba(149, 136, 247, 0.3);
+    padding-left: 16px;
+    border-left-color: var(--secondary-color);
+}
+.item:hover {
+    box-shadow: 0px 6px 16px rgba(149, 136, 247, 0.3);
+    padding-left: 16px;
+}

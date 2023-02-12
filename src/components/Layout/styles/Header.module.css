@@ -1,0 +1,19 @@
+.header {
+    height: var(--header-height);
+    background-color: var(--purple-dark);
+}
+.inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 58px;
+}
