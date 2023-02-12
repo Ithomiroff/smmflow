@@ -25,6 +25,12 @@
     box-shadow: 0px 6px 16px rgba(149, 136, 247, 0.3);
     color: var(--text-color-light);
 }
+.outline {
+    background: #FFFFFF;
+    border: 1px solid #7852E4;
+    box-shadow: 0px 6px 16px rgba(149, 136, 247, 0.3);
+    color: #7852E4;
+}
 .icon {
     display: flex;
     align-items: center;
@@ -34,4 +40,9 @@
     display: block;
     width: 14px;
     height: 14px;
+}
+.disabled {
+    opacity: 0.3;
+    cursor: default;
+    transform: none!important;
 }

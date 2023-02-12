@@ -9,10 +9,11 @@ const Button = ({
   icon,
   children,
   loading,
+  disabled,
   ...props
 }) => {
   return (
-    <button className={cx('btn', variant, size, { icon })} {...props}>
+    <button className={cx('btn', variant, size, { icon, disabled })} disabled={disabled} {...props}>
       {icon}
       <span>{children}</span>
     </button>

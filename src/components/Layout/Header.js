@@ -8,6 +8,7 @@ import Button from "@/components/Button";
 import { useState } from "react";
 import { Auth } from "@/components/Auth/Auth";
 import { Reset } from "@/components/Auth/Reset";
+import Link from "next/link";
 
 const cx = createStyles(styles);
 
@@ -45,7 +46,9 @@ const Header = () => {
             variant="led"
             icon={<BasketSvg/>}
           >
-            Быстрый заказ
+            <Link href="order">
+              Быстрый заказ
+            </Link>
           </Button>
         </div>
       </div>

@@ -9,6 +9,7 @@ import Advantages from "@/views/index/Advantages";
 import DiscountBanner from "@/views/index/DiscountBanner";
 import { Faq } from "../views/index/Faq/Faq";
 import { ReadyForOrder } from "../views/index/ReadyForOrder/ReadyForOrder";
+import { commonDataFetch } from "@/utils/commonDataFetch";
 
 export default function Home({ categories, services, user }) {
 
@@ -20,8 +21,6 @@ export default function Home({ categories, services, user }) {
       services
     })
   }, [categories, services]);
-
-  console.log(user);
 
   return (
     <>
@@ -56,20 +55,5 @@ export default function Home({ categories, services, user }) {
 }
 
 export async function getStaticProps() {
-  const { data: user } = await requests.userInfo();
-  const { catalog, payments } = await requests.allData();
-
-  const { categories, services, types } = catalog;
-
-  categories.forEach((item) => {
-    item.children = types[item.id];
-  });
-
-  return {
-    props: {
-      categories,
-      services,
-      user,
-    },
-  }
+  return await commonDataFetch();
 }
