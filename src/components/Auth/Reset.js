@@ -34,7 +34,7 @@ const Reset = ({ onClose }) => {
 
   return (
     <Modal onClose={onClose}>
-      <div className={cx('inner')}>
+      <div className={cx('inner', 'card')}>
         <Formik
           initialValues={{ email: '' }}
           onSubmit={onSubmit}

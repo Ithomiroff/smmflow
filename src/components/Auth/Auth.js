@@ -55,7 +55,7 @@ const Auth = ({ register, onClose, toRegister, toReset }) => {
     <Modal
       onClose={onClose}
     >
-      <div className={styles.inner}>
+      <div className={cx('inner', 'card')}>
           <Formik
             initialValues={{ email: '', password: '' }}
             onSubmit={onSubmit}
