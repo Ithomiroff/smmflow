@@ -1,7 +1,10 @@
 import styles from './OrderCart.module.css';
 import createStyles from "@/utils/createStyles";
 import { Select } from "@/components/Select/Select";
-import { useMemo } from "react";
+import {
+  useEffect,
+  useMemo
+} from "react";
 import { useAppRootContext } from "@/context/AppRoot";
 import { Input } from "@/components/Input/Input";
 import Button from "@/components/Button";
@@ -20,6 +23,7 @@ const OrderCart = () => {
       alert(JSON.stringify(values, null, 2));
     },
     validateOnChange: true,
+    validateOnMount: true,
     validate: values => {
       const errors = {};
 
@@ -32,6 +36,16 @@ const OrderCart = () => {
       return errors;
     }
   });
+
+  useEffect(() => {
+    const query = new URLSearchParams(window.location.search);
+    if (query.has('network')) {
+      formik.setFieldValue('networkId', query.get('network'));
+    }
+    if (query.has('service')) {
+      formik.setFieldValue('service_id', query.get('service'));
+    }
+  }, [formik.setFieldValue]);
 
   const servicesOptions = useMemo(() => {
     return appData.categories.find(({ id }) => id === formik.values.networkId)?.children || [];

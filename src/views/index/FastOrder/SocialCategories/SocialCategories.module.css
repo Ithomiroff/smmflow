@@ -93,11 +93,11 @@
     transition: all .3s ease-in;
 
 }
-.card:hover > .arrow {
+.card:hover > a .arrow {
     border-color: transparent;
     color: var(--text-color-light);
 }
-.card:hover > .arrow > svg {
+.card:hover > a .arrow > svg {
     transform: rotate(0);
 }
 

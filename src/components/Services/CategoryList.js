@@ -5,10 +5,11 @@ import {
   useSpring,
   useTransition
 } from "@react-spring/web";
+import Link from "next/link";
 
 const cx = createStyles(styles);
 
-const CategoryList = ({ categories }) => {
+const CategoryList = ({ categories, activeNetwork, onClose }) => {
   const slide = useSpring({
     from: {
       x: 120
@@ -36,7 +37,12 @@ const CategoryList = ({ categories }) => {
       <ul>
         {transitions((style, item) => (
           <animated.li style={style}>
-            <a href="#">{item.name}</a>
+            <Link
+              onClick={onClose}
+              href={{
+              pathname: '/order',
+              query: { network: activeNetwork, service: item.id },
+            }}>{item.name}</Link>
           </animated.li>
         ))}
       </ul>

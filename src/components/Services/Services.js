@@ -67,7 +67,7 @@ const Services = ({ onClose }) => {
         </div>
         <div className={cx('images')}>
           {
-            categories ? <CategoryList categories={categories}/> : (
+            categories ? <CategoryList categories={categories} activeNetwork={activeCategory} onClose={onClose} /> : (
               <div className={cx('banner')}>
                 <h2>Выберите социальную <br/> сеть, для подбора <br/> нужной услуги</h2>
                 <ServicesFlat/>

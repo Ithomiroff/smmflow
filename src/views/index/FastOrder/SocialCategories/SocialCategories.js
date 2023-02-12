@@ -13,6 +13,7 @@ import {
   animated,
   useTransition
 } from "@react-spring/web";
+import Link from "next/link";
 
 const cx = createStyles(styles);
 
@@ -71,18 +72,26 @@ const SocialCategories = () => {
         <ul className={cx('categories')}>
           {transitions((style, item) => (
             <animated.li style={style} key={item.id} className={cx('card')}>
-              <div className={cx('icon')}>
-                <Image
-                  alt={item.name}
-                  src={item.icon}
-                  width={24}
-                  height={24}
-                />
-              </div>
-              <h2>{item.name}</h2>
-              <div className={cx('arrow')}>
-                <ArrowSvg/>
-              </div>
+              <Link
+                href={{
+                  pathname: '/order',
+                  query: { network: activeKey, service: item.id },
+                }}>
+                <>
+                  <div className={cx('icon')}>
+                    <Image
+                      alt={item.name}
+                      src={item.icon}
+                      width={24}
+                      height={24}
+                    />
+                  </div>
+                  <h2>{item.name}</h2>
+                  <div className={cx('arrow')}>
+                    <ArrowSvg/>
+                  </div>
+                </>
+              </Link>
             </animated.li>
           ))}
         </ul>

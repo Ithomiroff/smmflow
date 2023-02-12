@@ -32,7 +32,9 @@ const Header = () => {
     <header className={styles.header}>
       <div className={cx('container', 'h-100', styles.inner)}>
         <div className={cx('logo', 'h-100')}>
-          <LogoSvg/>
+          <Link href="/">
+            <LogoSvg/>
+          </Link>
           <Navigation/>
         </div>
         <div className={cx('buttons')}>
