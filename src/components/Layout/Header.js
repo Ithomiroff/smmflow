@@ -9,6 +9,7 @@ import { useState } from "react";
 import { Auth } from "@/components/Auth/Auth";
 import { Reset } from "@/components/Auth/Reset";
 import Link from "next/link";
+import { MobileMenu } from "@/components/Layout/MobileMenu";
 
 const cx = createStyles(styles);
 
@@ -52,6 +53,9 @@ const Header = () => {
               Быстрый заказ
             </Link>
           </Button>
+        </div>
+        <div className={cx('mobile-menu')}>
+          <MobileMenu/>
         </div>
       </div>
 

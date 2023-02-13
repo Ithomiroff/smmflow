@@ -17,3 +17,59 @@
     align-items: center;
     gap: 58px;
 }
+
+.mobile-menu {
+    display: none;
+}
+
+.btn-menu {
+    position: relative;
+    width: 24px;
+    height: 1.5px;
+    background-color: #FFFFFF;
+    transition: all .3s ease-in;
+}
+
+.btn-menu:after {
+    content: '';
+    top: 6px;
+    position: absolute;
+    width: 24px;
+    height: 1.5px;
+    background-color: #FFFFFF;
+}
+.mobileOpen {
+    transform: rotate(45deg);
+}
+.mobileOpen:after {
+    transform: rotate(-90deg) translateX(6px);
+}
+.btnWrap {
+    cursor: pointer;
+}
+.wrapper {
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    left: 0;
+    z-index: 999;
+    padding: 20px;
+}
+.linkItem {
+    cursor: pointer;
+    padding: 16px 0;
+    border-bottom: 1px solid #ECE9F8;
+}
+@media (max-width: 890px) {
+    .buttons {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    .header {
+        height: 80px;
+    }
+}

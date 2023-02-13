@@ -39,3 +39,8 @@
 .servicesOpen .icon {
     transform: rotate(-180deg);
 }
+@media (max-width: 890px) {
+    .nav {
+        display: none;
+    }
+}

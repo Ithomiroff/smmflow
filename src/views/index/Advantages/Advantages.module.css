@@ -58,6 +58,7 @@
 @media (max-width: 885px) {
     .list {
         grid-template-columns: repeat(2, 1fr);
+        gap: 0;
     }
     .item {
         border: none!important;
@@ -72,5 +73,12 @@
         display: none;
     }
     .item {
+    }
+}
+
+
+@media (max-width: 480px) {
+    .list {
+        grid-template-columns: 1fr;
     }
 }
