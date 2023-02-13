@@ -3,25 +3,55 @@ import createStyles from "@/utils/createStyles";
 import { Select } from "@/components/Select/Select";
 import {
   useEffect,
-  useMemo
+  useMemo,
+  useState
 } from "react";
 import { useAppRootContext } from "@/context/AppRoot";
 import { Input } from "@/components/Input/Input";
 import Button from "@/components/Button";
 import Gift from "@/assets/images/gift.svg";
 import { useFormik } from "formik";
+import { BannerOrder } from "@/views/order/BannerOrder/BannerOrder";
+import requests from "@/api/urls";
+import { useRouter } from "next/router";
 
 const cx = createStyles(styles);
 
 const OrderCart = () => {
 
   const { appData } = useAppRootContext();
+  const router = useRouter();
+
+  const [serverError, setServerError] = useState();
+
+  const onSubmit = async (values) => {
+    setServerError(undefined);
+
+    try {
+      const form = new FormData();
+      form.append('service_id', values.service_id);
+      form.append('url', values.url);
+      form.append('quantity', values.quantity);
+      const { success, msg, id } = await requests.createOrder(form);
+
+      if (success) {
+        router.push({
+          pathname: `/payment`,
+          query: {
+            order: id,
+          }
+        });
+      } else {
+        setServerError(msg);
+      }
+    } catch (err) {
+
+    }
+  };
 
   const formik = useFormik({
     initialValues: { service_id: '', url: '', quantity: '', networkId: '', paymentId: '' },
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
-    },
+    onSubmit,
     validateOnChange: true,
     validateOnMount: true,
     validate: values => {
@@ -144,12 +174,19 @@ const OrderCart = () => {
               <Button
                 variant="outline"
               >Активировать</Button>
-              <a href="https://t.me/+38-LLhCR6xFlMmVl" target="_blank" rel="noreferrer">
-                <Gift/>
-                Получить промокод
-              </a>
+              <div className={cx('link')}>
+                <a href="https://t.me/+38-LLhCR6xFlMmVl" target="_blank" rel="noreferrer">
+                  <Gift/>
+                  Получить промокод
+                </a>
+              </div>
             </div>
             <div className={cx('sum')}>
+              {serverError && (
+                <div className={cx('error')}>
+                  {serverError}
+                </div>
+              )}
               <div className={cx('sumText')}>
                 <span>Итого</span>
                 <span>{total} руб.</span>
@@ -163,6 +200,7 @@ const OrderCart = () => {
           </div>
         </form>
       </div>
+      <BannerOrder/>
     </section>
   )
 };

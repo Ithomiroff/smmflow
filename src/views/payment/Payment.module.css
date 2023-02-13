@@ -1,0 +1,50 @@
+.section {
+    padding: 80px 0;
+}
+
+.section h1 {
+    margin-bottom: 40px;
+}
+.info {
+    display: flex;
+    gap: 32px;
+}
+.block {
+    width: 50%;
+}
+.block h2 {
+    margin-top: 16px;
+}
+.block button {
+    width: 100%;
+}
+.types {
+    display: flex;
+    gap: 8px;
+    padding: 16px 0 32px 0;
+}
+.success {
+    color: #03CA82;
+    padding: 0 0 24px 0;
+}
+.error {
+    color: #DC3545;
+    padding: 0 0 24px 0;
+}
+@media (max-width: 1240px) {
+    .info {
+        flex-direction: column;
+    }
+    .types {
+        flex-direction: column;
+    }
+    .block:last-child {
+        border-top: 1px solid #ECE9F8;
+        padding-top: 16px;
+    }
+}
+@media (max-width: 840px) {
+    .block {
+        width: 100%;
+    }
+}

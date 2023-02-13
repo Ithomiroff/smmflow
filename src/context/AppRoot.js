@@ -1,5 +1,6 @@
 import {
   createContext,
+  useCallback,
   useContext,
   useReducer,
   useState
@@ -15,7 +16,7 @@ const AppRoot = ({ children }) => {
     categories: [],
   });
 
-  const setData = (valueObject) => setAppData(prev => ({...prev, ...valueObject}));
+  const setData = useCallback((valueObject) => setAppData(prev => ({...prev, ...valueObject})), [setAppData]);
 
   const value = {
     appData,

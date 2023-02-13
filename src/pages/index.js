@@ -10,17 +10,11 @@ import DiscountBanner from "@/views/index/DiscountBanner";
 import { Faq } from "../views/index/Faq/Faq";
 import { ReadyForOrder } from "../views/index/ReadyForOrder/ReadyForOrder";
 import { commonDataFetch } from "@/utils/commonDataFetch";
+import { useCommonData } from "@/utils/useCommonData";
 
-export default function Home({ categories, services, user }) {
+export default function Home(commonData) {
 
-  const { setData } = useAppRootContext();
-
-  useEffect(() => {
-    setData({
-      categories,
-      services
-    })
-  }, [categories, services]);
+  useCommonData(commonData);
 
   return (
     <>

@@ -15,7 +15,10 @@ const commonDataFetch = async () => {
       categories,
       services,
       user,
-      payments,
+      payments: Object.keys(payments).map((id) => ({
+        ...payments[id],
+        id,
+      })),
     },
   }
 };

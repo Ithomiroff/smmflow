@@ -1,19 +1,11 @@
 import Head from 'next/head'
 import { OrderCart } from "@/views/order/OrderCart/OrderCart";
 import { commonDataFetch } from "@/utils/commonDataFetch";
-import { useAppRootContext } from "@/context/AppRoot";
-import { useEffect } from "react";
+import { useCommonData } from "@/utils/useCommonData";
 
-export default function Order({ categories, services }) {
+export default function Order(CommonData) {
 
-  const { setData } = useAppRootContext();
-
-  useEffect(() => {
-    setData({
-      categories,
-      services
-    })
-  }, [categories, services]);
+  useCommonData(CommonData)
 
   return (
     <>
