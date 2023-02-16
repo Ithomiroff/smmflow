@@ -1,0 +1,33 @@
+.page {
+    display: flex;
+}
+
+.side {
+    padding: 80px 16px 80px 0;
+    width: 312px;
+    border-right: 1px solid var(--gray-color-light);
+}
+.content {
+    padding: 80px 0 80px 16px;
+    flex: 1 1;
+}
+
+@media (max-width: 1000px) {
+    .page {
+        flex-direction: column;
+    }
+    .side {
+        width: 100%;
+        padding: 40px 0 0 0;
+        border-right: none;
+    }
+    .content {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 890px) {
+    .nav {
+        display: flex;
+    }
+}

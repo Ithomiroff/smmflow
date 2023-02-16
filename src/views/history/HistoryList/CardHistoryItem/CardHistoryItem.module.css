@@ -1,0 +1,22 @@
+.bordered {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0;
+    border-top: 1px solid var(--gray-color-light);
+}
+.top {
+    padding: 0 0 16px 0;
+}
+.purple {
+    color: var(--mid-purple);
+}
+.gray {
+    color: var(--medium-gray);
+}
+.status {
+    font-size: 14px;
+}
+.item {
+    flex: 1 1;
+}

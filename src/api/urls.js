@@ -1,7 +1,7 @@
-import client from "@/api/config";
+import client, { clientAuthed } from "@/api/config";
 
 const requests = {
-  userInfo: () => client.get('/user/info'),
+  userInfo: () => clientAuthed.get('/user/info'),
   allData: () => client.get('/data/all').then((res) => res.data),
   login: (formData) => client.post('/auth/login', formData).then((res) => res.data),
   register: (formData) => client.post('/auth/register', formData).then((res) => res.data),

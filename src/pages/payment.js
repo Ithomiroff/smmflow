@@ -2,6 +2,7 @@ import { PaymentForm } from "@/views/payment/PaymentForm";
 import Head from "next/head";
 import { commonDataFetch } from "@/utils/commonDataFetch";
 import { useCommonData } from "@/utils/useCommonData";
+import Layout from "@/components/Layout";
 
 export default function Payment(CommonData) {
 
@@ -17,6 +18,14 @@ export default function Payment(CommonData) {
       <PaymentForm />
     </>
   );
+}
+
+Payment.getLayout = function getLayout(page) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
 }
 
 // export async function getServerSideProps(context) {

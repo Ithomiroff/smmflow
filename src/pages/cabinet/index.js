@@ -1,29 +1,32 @@
 import Head from 'next/head'
-import { OrderCart } from "@/views/order/OrderCart/OrderCart";
 import { commonDataFetch } from "@/utils/commonDataFetch";
-import { useCommonData } from "@/utils/useCommonData";
 import Layout from "@/components/Layout";
+import { CabinetLayout } from "@/components/CabinetLayout/CabinetLayout";
+import { HistoryList } from "@/views/history/HistoryList/HistoryList";
 
-export default function Order(CommonData) {
-
-  useCommonData(CommonData)
+export default function Cabinet() {
 
   return (
     <>
       <Head>
-        <title>SMMFLOW - быстрый заказ</title>
+        <title>SMMFLOW</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <OrderCart/>
+      <section>
+        <HistoryList/>
+      </section>
+
     </>
   )
-};
+}
 
-Order.getLayout = function getLayout(page) {
+Cabinet.getLayout = function getLayout(page) {
   return (
     <Layout>
-      {page}
+      <CabinetLayout>
+        {page}
+      </CabinetLayout>
     </Layout>
   )
 }

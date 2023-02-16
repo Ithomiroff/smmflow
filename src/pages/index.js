@@ -11,6 +11,7 @@ import { Faq } from "../views/index/Faq/Faq";
 import { ReadyForOrder } from "../views/index/ReadyForOrder/ReadyForOrder";
 import { commonDataFetch } from "@/utils/commonDataFetch";
 import { useCommonData } from "@/utils/useCommonData";
+import Layout from "@/components/Layout";
 
 export default function Home(commonData) {
 
@@ -45,6 +46,14 @@ export default function Home(commonData) {
         <ReadyForOrder/>
       </section>
     </>
+  )
+}
+
+Home.getLayout = function getLayout(page) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
   )
 }
 

@@ -1,0 +1,13 @@
+.cell {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.mark {
+    color: var(--secondary-color);
+}

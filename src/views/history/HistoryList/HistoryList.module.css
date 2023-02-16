@@ -1,0 +1,39 @@
+.table {
+    display: flex;
+    flex-direction: column;
+}
+.head {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr 1fr 1fr;
+    height: 54px;
+    line-height: 54px;
+    background-color: var(--gray-color-light);
+    color: var(--medium-gray);
+}
+
+.title {
+    padding-bottom: 40px;
+}
+
+.head .cell:first-child {
+    padding-left: 16px;
+}
+.content .cell:nth-child(5n + 1) {
+    padding-left: 16px;
+}
+.cards {
+    display: none;
+}
+@media (max-width: 890px) {
+    .head {
+        display: none;
+    }
+    .table {
+        display: none;
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+}
