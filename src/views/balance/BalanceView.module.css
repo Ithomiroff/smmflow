@@ -1,0 +1,88 @@
+.title {
+    margin-bottom: 40px;
+}
+
+.content {
+    display: flex;
+    gap: 48px;
+}
+
+.block {
+    flex: 1 1;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.chip {
+    line-height: 38px;
+    border-radius: 30px;
+    background: #F6F4FF;
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+
+.chip:hover {
+    transform: scale(1.09);
+}
+
+.chipSelected {
+    background-color: var(--mid-purple);
+}
+.chipSelected .purple {
+    color: var(--text-color-light);
+}
+
+.purple {
+    color: var(--mid-purple);
+}
+.green {
+    color: #03CA82;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.services {
+    padding-top: 12px;
+}
+.types {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 16px;
+}
+
+.submit {
+    margin-top: 14px;
+}
+.submit button {
+    width: 100%;
+}
+
+.error {
+    font-size: 14px;
+}
+@media (max-width: 1050px) {
+    .content {
+        flex-direction: column;
+    }
+}
+@media (max-width: 1000px) {
+    .content {
+        flex-direction: row;
+    }
+}
+@media (max-width: 790px) {
+    .content {
+        flex-direction: column;
+    }
+}

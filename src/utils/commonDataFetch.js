@@ -1,7 +1,6 @@
 import requests from "@/api/urls";
 
 const commonDataFetch = async () => {
-  const { data: user } = await requests.userInfo();
   const { catalog, payments } = await requests.allData();
 
   const { categories, services, types } = catalog;
@@ -14,7 +13,6 @@ const commonDataFetch = async () => {
     props: {
       categories,
       services,
-      user,
       payments: Object.keys(payments).map((id) => ({
         ...payments[id],
         id,

@@ -50,6 +50,11 @@
     gap: 16px;
     align-items: flex-start;
 }
+.horizontal {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
 @media (max-width: 1240px) {
     .type {
         width: 100%;

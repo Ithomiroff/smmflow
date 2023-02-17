@@ -113,3 +113,12 @@ input[type=number] {
   border-radius: 15px;
   padding: 24px;
 }
+.text-purple {
+  color: var(--mid-purple);
+}
+.text-green {
+  color: #03CA82;
+}
+.text-error {
+  color: #DC3545;
+}

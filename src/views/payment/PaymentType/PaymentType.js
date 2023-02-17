@@ -4,10 +4,10 @@ import Image from "next/image";
 
 const cx = createStyles(styles);
 
-const PaymentType = ({ item, selected, onSelect }) => {
+const PaymentType = ({ item, layout,  selected, onSelect }) => {
 
   return (
-    <article className={cx('type', { selected })} onClick={onSelect}>
+    <article className={cx('type', { selected }, layout)} onClick={onSelect}>
       <div className={cx('title')}>
         <div className={cx('radio')}/>
         <span>{item.name || <Image alt={item.name_img} key={item.name_img} src={item.name_img} width={100} height={60}/>}</span>
